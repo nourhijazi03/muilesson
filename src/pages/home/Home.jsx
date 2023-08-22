@@ -3,14 +3,17 @@ import React, { useEffect, useState } from "react";
 import { Box, Paper, Typography, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
-export default function Home() {
-  const [mydata, setMydata] = useState([]);
-  let totalPrice=0;
-  useEffect(() => {
-    fetch("http://localhost:3100/myData")
-      .then((response) => response.json())
-      .then((data) => setMydata(data));
-  }, []);
+
+
+export default function Home({mydata,setMydata}) {
+//    const [mydata, setMydata] = useState([]);
+//   let totalPrice=0;
+//   useEffect(() => {
+//     fetch("http://localhost:3100/myData")
+//       .then((response) => response.json())
+//       .then((data) => setMydata(data));
+// },[]);
+let totalPrice=0;
   return (
     <Box>
       {mydata.map((item) => {
@@ -55,6 +58,9 @@ export default function Home() {
       <Typography variant="h6" textAlign="center" mt="10px">
         Total: ${totalPrice}
       </Typography>
+      
     </Box>
   );
+ 
 }
+

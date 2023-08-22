@@ -25,6 +25,7 @@ function Root() {
 
   const [noneOrBlock, setNoneOrBlock] = useState("none");
   const [temp, setTemp] = useState("permanent");
+  
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />

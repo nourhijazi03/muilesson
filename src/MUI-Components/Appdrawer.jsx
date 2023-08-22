@@ -20,6 +20,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Brightness4, Brightness7 } from "@mui/icons-material";
+import BarChartIcon from '@mui/icons-material/BarChart';
 
 export default function Appdrawer({
   setMyMode,
@@ -35,8 +36,8 @@ export default function Appdrawer({
   const list=[
     {text:"Home" , icon:<HomeIcon/> , path:"/"},
     {text:"Create" , icon:<CreateIcon/> , path:"/create"},
-    {text:"Profile" , icon:<PersonIcon/> , path:"/profile"},
-    {text:"Setting" , icon:<SettingsIcon/> , path:"/settings"},
+    {text:"Bar Chart" , icon:<BarChartIcon/> , path:"/bar"},
+    {text:"Pie Chart" , icon:<SettingsIcon/> , path:"/pie"},
 
   ];
   return (

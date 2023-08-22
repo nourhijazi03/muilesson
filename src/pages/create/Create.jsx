@@ -9,7 +9,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { useNavigate } from "react-router-dom";
 
-export default function Create() {
+export default function Create({setAdded, added}) {
   const[title,setTitle]=useState("");
   const[price,setPrice]=useState(0);
   const navigate=useNavigate();
@@ -56,6 +56,7 @@ export default function Create() {
           headers:{'Content-Type': 'application/json'},
           body:JSON.stringify({title,price})
         }).then(()=>{
+          setAdded(!added);
           navigate("/");
         })
         window.alert("item has been saved");
